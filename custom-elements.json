@@ -1,0 +1,168 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "stories/index.stories.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "Regular"
+        },
+        {
+          "kind": "variable",
+          "name": "CustomTitle"
+        },
+        {
+          "kind": "variable",
+          "name": "CustomCounter"
+        },
+        {
+          "kind": "variable",
+          "name": "SlottedContent"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "stories/index.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Regular",
+          "declaration": {
+            "name": "Regular",
+            "module": "stories/index.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "CustomTitle",
+          "declaration": {
+            "name": "CustomTitle",
+            "module": "stories/index.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "CustomCounter",
+          "declaration": {
+            "name": "CustomCounter",
+            "module": "stories/index.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "SlottedContent",
+          "declaration": {
+            "name": "SlottedContent",
+            "module": "stories/index.stories.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/LitTailwind.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LitTailwind",
+          "members": [
+            {
+              "kind": "field",
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Hey there'",
+              "attribute": "title"
+            },
+            {
+              "kind": "field",
+              "name": "counter",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "attribute": "counter"
+            },
+            {
+              "kind": "method",
+              "name": "__increment"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Hey there'",
+              "fieldName": "title"
+            },
+            {
+              "name": "counter",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "fieldName": "counter"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "lit-tailwind",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LitTailwind",
+          "declaration": {
+            "name": "LitTailwind",
+            "module": "src/LitTailwind.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LitTailwind",
+          "declaration": {
+            "name": "LitTailwind",
+            "module": "./LitTailwind"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/lit-tailwind.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "lit-tailwind",
+          "declaration": {
+            "name": "LitTailwind",
+            "module": "/src/LitTailwind"
+          }
+        }
+      ]
+    }
+  ]
+}
