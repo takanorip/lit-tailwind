@@ -3,6 +3,8 @@ import { property } from 'lit/decorators.js';
 
 export class LitTailwind extends LitElement {
   static styles = css`
+    @tailwind base;
+    @tailwind utilities;
     :host {
       display: block;
       padding: 25px;
@@ -20,7 +22,7 @@ export class LitTailwind extends LitElement {
 
   render() {
     return html`
-      <h2>${this.title} Nr. ${this.counter}!</h2>
+      <h2 class="text-gray-900">${this.title} Nr. ${this.counter}!</h2>
       <button @click=${this.__increment}>increment</button>
     `;
   }
