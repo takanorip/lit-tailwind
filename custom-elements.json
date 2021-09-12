@@ -1,166 +1,68 @@
 {
-  "schemaVersion": "1.0.0",
-  "readme": "",
-  "modules": [
+  "version": "experimental",
+  "tags": [
     {
-      "kind": "javascript-module",
-      "path": "src/LitTailwind.ts",
-      "declarations": [
+      "name": "my-element",
+      "path": "./src/my-element.ts",
+      "description": "An example element.",
+      "attributes": [
         {
-          "kind": "class",
-          "description": "",
-          "name": "LitTailwind",
-          "members": [
-            {
-              "kind": "field",
-              "name": "title",
-              "type": {
-                "text": "string"
-              },
-              "default": "'Hey there'",
-              "attribute": "title"
-            },
-            {
-              "kind": "field",
-              "name": "counter",
-              "type": {
-                "text": "number"
-              },
-              "default": "5",
-              "attribute": "counter"
-            },
-            {
-              "kind": "method",
-              "name": "__increment"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "title",
-              "type": {
-                "text": "string"
-              },
-              "default": "'Hey there'",
-              "fieldName": "title"
-            },
-            {
-              "name": "counter",
-              "type": {
-                "text": "number"
-              },
-              "default": "5",
-              "fieldName": "counter"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "lit-tailwind",
-          "customElement": true
+          "name": "name",
+          "description": "The name to say \"Hello\" to.",
+          "type": "string",
+          "default": "\"World\""
+        },
+        {
+          "name": "count",
+          "description": "The number of times the button has been clicked.",
+          "type": "number",
+          "default": "0"
         }
       ],
-      "exports": [
+      "properties": [
         {
-          "kind": "js",
-          "name": "LitTailwind",
-          "declaration": {
-            "name": "LitTailwind",
-            "module": "src/LitTailwind.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "LitTailwind",
-          "declaration": {
-            "name": "LitTailwind",
-            "module": "./LitTailwind.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/lit-tailwind.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "custom-element-definition",
-          "name": "lit-tailwind",
-          "declaration": {
-            "name": "LitTailwind",
-            "module": "/src/LitTailwind.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "stories/index.stories.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "Regular"
+          "name": "name",
+          "attribute": "name",
+          "description": "The name to say \"Hello\" to.",
+          "type": "string",
+          "default": "\"World\""
         },
         {
-          "kind": "variable",
-          "name": "CustomTitle"
+          "name": "count",
+          "attribute": "count",
+          "description": "The number of times the button has been clicked.",
+          "type": "number",
+          "default": "0"
         },
         {
-          "kind": "variable",
-          "name": "CustomCounter"
+          "name": "renderRoot",
+          "description": "Node or ShadowRoot into which element DOM should be rendered. Defaults\nto an open shadowRoot.",
+          "type": "HTMLElement | ShadowRoot"
         },
         {
-          "kind": "variable",
-          "name": "SlottedContent"
+          "name": "isUpdatePending",
+          "type": "boolean"
+        },
+        {
+          "name": "hasUpdated",
+          "type": "boolean"
+        },
+        {
+          "name": "updateComplete",
+          "description": "Returns a Promise that resolves when the element has completed updating.\nThe Promise value is a boolean that is `true` if the element completed the\nupdate without triggering another update. The Promise result is `false` if\na property was set inside `updated()`. If the Promise is rejected, an\nexception was thrown during the update.\n\nTo await additional asynchronous work, override the `getUpdateComplete`\nmethod. For example, it is sometimes useful to await a rendered element\nbefore fulfilling this Promise. To do this, first await\n`super.getUpdateComplete()`, then any subsequent state.",
+          "type": "Promise<boolean>"
         }
       ],
-      "exports": [
+      "slots": [
         {
-          "kind": "js",
-          "name": "default",
-          "declaration": {
-            "module": "stories/index.stories.ts"
-          }
-        },
+          "name": "",
+          "description": "This element has a slot"
+        }
+      ],
+      "cssParts": [
         {
-          "kind": "js",
-          "name": "Regular",
-          "declaration": {
-            "name": "Regular",
-            "module": "stories/index.stories.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "CustomTitle",
-          "declaration": {
-            "name": "CustomTitle",
-            "module": "stories/index.stories.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "CustomCounter",
-          "declaration": {
-            "name": "CustomCounter",
-            "module": "stories/index.stories.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "SlottedContent",
-          "declaration": {
-            "name": "SlottedContent",
-            "module": "stories/index.stories.ts"
-          }
+          "name": "button",
+          "description": "The button"
         }
       ]
     }
