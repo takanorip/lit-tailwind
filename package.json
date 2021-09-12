@@ -8,7 +8,7 @@
   "type": "module",
   "scripts": {
     "build": "rollup -c rollup.config.js",
-    "build:watch": "tsc --watch",
+    "build:watch": "rollup -w",
     "clean": "rimraf my-element.{d.ts,d.ts.map,js,js.map} test/my-element.{d.ts,d.ts.map,js,js.map} test/my-element_test.{d.ts,d.ts.map,js,js.map}",
     "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
     "lint:eslint": "eslint 'src/**/*.ts'",
