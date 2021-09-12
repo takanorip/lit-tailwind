@@ -7,7 +7,7 @@
   "module": "my-element.js",
   "type": "module",
   "scripts": {
-    "build": "tsc && rollup -c rollup.config.js",
+    "build": "rollup -c rollup.config.js",
     "build:watch": "tsc --watch",
     "clean": "rimraf my-element.{d.ts,d.ts.map,js,js.map} test/my-element.{d.ts,d.ts.map,js,js.map} test/my-element_test.{d.ts,d.ts.map,js,js.map}",
     "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
@@ -37,6 +37,7 @@
     "@open-wc/testing-karma": "^4.0.9",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@rollup/plugin-replace": "^3.0.0",
+    "@rollup/plugin-typescript": "^8.2.5",
     "@takanorip/rollup-plugin-lit-tailwindcss": "^0.0.2",
     "@types/mocha": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^4.31.0",

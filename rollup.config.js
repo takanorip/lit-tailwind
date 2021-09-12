@@ -6,19 +6,22 @@
 
 import summary from 'rollup-plugin-summary';
 import resolve from '@rollup/plugin-node-resolve';
+import typescript from '@rollup/plugin-typescript';
 import litTailwind from '@takanorip/rollup-plugin-lit-tailwindcss';
 
 export default {
-  input: './dev/my-element.js',
+  input: './src/my-element.ts',
   output: {
-    file: './dev/my-element.bundled.js',
+    dir: './dev',
     format: 'esm',
+    sourcemap: true,
   },
   plugins: [
+    typescript(),
     resolve(),
     summary(),
     litTailwind({
-      include: 'dev/**/*.js',
+      include: 'src/**/*.ts',
       placeholder: 'tw_placeholder',
       exclude: undefined,
     }),
